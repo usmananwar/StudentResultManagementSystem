@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Student Result Management System</title>
+
+</head>
+
+<body>
+
+
+	<nav>
+		<a href="#" onclick="showHomePage()">Home</a> <a href="#" onclick="showAddStudentsPage()">Add New Students</a>
+		<a href="#" onclick="showStudentsListPage()">Students List</a> <a href="#" onclick="showAddCoursesPage()">Add
+			New Courses</a> <a href="#" onclick="showCoursesListPage()">Courses List</a> <a href="#"
+			onclick="showAddResultsPage()">Add New Results</a> <a href="#" onclick="showResultsListPage()">Results
+			List</a>
+	</nav>
+
+	<main id="app">
+
+		<h1>Student Result Management System</h1>
+
+		<!-- Content will be dynamically displayed here -->
+
+		<div id="content">
+			<h1>WELCOME</h1>
+
+		</div>
+		<div id="msgBar"></div>
+
+
+		<form id="addStudentFormTemplate" style="display:none;">
+			<table>
+
+				<tr>
+					<td><label for="firstName">First Name:</label> <input type="text" id="firstName"></td>
+
+					<td><label for="familyName">Family Name:</label> <input type="text" id="familyName"></td>
+				</tr>
+
+				<tr>
+					<td><label for="dob">Date of Birth:</label> <input type="date" id="dob"></td>
+
+					<td><label for="email">Email Address:</label> <input type="email" id="email"></td>
+				<tr>
+				<tr>
+					<td colspan="2">
+						<button type="button" onclick="submitAddNewStudent()">Submit</button>
+					</td>
+				</tr>
+			</table>
+
+		</form>
+
+
+		<form id="addCourseFormTemplate" style="display:none;">
+			<table>
+				<tr>
+					<td><label for="courseName">Course Name:</label> <input type="text" id="courseName"> </td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<button type="button" onclick="submitAddNewCourse()">Submit</button>
+					</td>
+				</tr>
+			</table>
+
+		</form>
+
+
+		<form id="addResultFormTemplate" style="display: none;">
+			<table>
+				<tr>
+					<td><label>Student Name:</label> <select id="studentDropdown"> </select></td>
+					<td><label>Course Name:</label> <select id="courseDropdown"> </select></td>
+				</tr>
+
+				<tr>
+					<td><label>Score:</label>
+
+						<select id="scroreDropdown">
+							<option value="">---- Select ---</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+							<option value="F">F</option>
+						</select>
+
+					</td>
+
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<button type="button" onclick="submitAddNewResult()">Submit</button>
+					</td>
+				</tr>
+			</table>
+
+		</form>
+
+	</main>
+
+</body>
+
+</html>
